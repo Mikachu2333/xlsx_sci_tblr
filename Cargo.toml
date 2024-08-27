@@ -1,0 +1,15 @@
+[package]
+name    = "xlsx_sci_tblr"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+lto           = true
+codegen-units = 1
+opt-level     = "z"
+strip         = true
+panic         = "abort"
+
+[dependencies]
+calamine        = { version = "0.25.0", default-features = false }
+rust_xlsxwriter = { version = "0.74.0", default-features = false }
